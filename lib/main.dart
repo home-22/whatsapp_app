@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_app/pages/Home_Page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +15,14 @@ class MyApp extends StatelessWidget {
       title: 'Whatsapp_App',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: AppBarTheme(
-          color: Colors.green
+        appBarTheme: const AppBarTheme(color: Colors.green),
+        bottomSheetTheme: BottomSheetThemeData(
+          backgroundColor: Colors.black.withOpacity(0),
         ),
-     
       ),
-  
+      routes: {
+        '/': (context) => const HomePage(),
+      },
     );
   }
 }
