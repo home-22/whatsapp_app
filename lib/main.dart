@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Whatsapp_App',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
-        appBarTheme: const AppBarTheme(color: Colors.green),
+        appBarTheme: const AppBarTheme(color: Color(0xFF075E55)),
         bottomSheetTheme: BottomSheetThemeData(
           backgroundColor: Colors.black.withOpacity(0),
         ),
