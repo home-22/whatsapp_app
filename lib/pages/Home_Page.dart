@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,9 +9,9 @@ class HomePage extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(60),
+          preferredSize: const Size.fromHeight(80),
           child: AppBar(
-            elevation: 10,
+            elevation: 0,
             title: const Padding(
               padding: EdgeInsets.only(top: 15),
               child: Text(
@@ -81,23 +79,58 @@ class HomePage extends StatelessWidget {
         body: Column(
           children: [
             Container(
-              color: Colors.amber,
+              color: const Color(0xFF075E55),
               child: TabBar(
                 isScrollable: true,
                 indicatorColor: Colors.white,
                 indicatorWeight: 4,
                 labelStyle:
-                    TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 tabs: [
-                  Container(
+                  const SizedBox(
                     width: 25,
                     child: Tab(
                       icon: Icon(Icons.camera_alt),
                     ),
-                  )
+                  ),
+                  Container(
+                    width: 100,
+                    child: Tab(
+                      child: Row(
+                        children: [
+                          const Text('CHATS'),
+                          Container(
+                            height: 20,
+                            width: 20,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: const Text(
+                              '10',
+                              style: TextStyle(
+                                  color: Color(0xFF075E55), fontSize: 14),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    width: 80,
+                    child: Tab(
+                      child: Text('STATUS'),
+                    ),
+                  ),
+                  Container(
+                    width: 80,
+                    child: Tab(
+                      child: Text('CALLS'),
+                    ),
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
