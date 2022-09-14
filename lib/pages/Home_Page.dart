@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_app/widgets/Chats.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -6,6 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
+      initialIndex: 1,
       length: 4,
       child: Scaffold(
         appBar: PreferredSize(
@@ -99,9 +101,11 @@ class HomePage extends StatelessWidget {
                       child: Row(
                         children: [
                           const Text('CHATS'),
+                          const SizedBox(width: 7),
                           Container(
-                            height: 20,
-                            width: 20,
+                            alignment: Alignment.center,
+                            height: 23,
+                            width: 23,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
@@ -109,20 +113,20 @@ class HomePage extends StatelessWidget {
                             child: const Text(
                               '10',
                               style: TextStyle(
-                                  color: Color(0xFF075E55), fontSize: 14),
+                                  color: Color(0xFF075E55), fontSize: 13),
                             ),
                           ),
                         ],
                       ),
                     ),
                   ),
-                  Container(
+                  const SizedBox(
                     width: 80,
                     child: Tab(
                       child: Text('STATUS'),
                     ),
                   ),
-                  Container(
+                  const SizedBox(
                     width: 80,
                     child: Tab(
                       child: Text('CALLS'),
@@ -131,6 +135,23 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
+            Flexible(
+              flex: 1,
+              child: TabBarView(
+                children: [
+                  Container(
+                    color: Colors.amber,
+                  ),
+                  Chats(),
+                  Container(
+                    color: Colors.amber,
+                  ),
+                  Container(
+                    color: Colors.amber,
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
