@@ -24,11 +24,50 @@ class Chats extends StatelessWidget {
                       height: 55,
                       width: 55,
                     ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          'Programer 1',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(height: 8),
+                        Text(
+                          'Hi Programer, how are you?',
+                          style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.grey,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  Column(
+                    children: [
+                      Text(
+                        '12:15',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.cyan,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(height: 6),
+                      Container(
+                        width: 27,
+                        height: 27,
+                        decoration: BoxDecoration(color: Colors.amber),
+                      )
+                    ],
                   )
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
