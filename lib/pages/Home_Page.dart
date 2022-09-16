@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_app/widgets/Chats.dart';
+import 'package:whatsapp_app/widgets/Status.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -95,7 +96,7 @@ class HomePage extends StatelessWidget {
                       icon: Icon(Icons.camera_alt),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 100,
                     child: Tab(
                       child: Row(
@@ -142,10 +143,8 @@ class HomePage extends StatelessWidget {
                   Container(
                     color: Colors.amber,
                   ),
-                  Chats(),
-                  Container(
-                    color: Colors.amber,
-                  ),
+                  const Chats(),
+                  Status(),
                   Container(
                     color: Colors.amber,
                   ),
