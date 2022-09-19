@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsapp_app/widgets/Calls.dart';
 import 'package:whatsapp_app/widgets/Chats.dart';
 import 'package:whatsapp_app/widgets/Status.dart';
 
@@ -136,21 +137,12 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            Flexible(
+            const Flexible(
               flex: 1,
               child: TabBarView(
-                children: [
-                  Container(
-                    color: Colors.amber,
-                  ),
-                  const Chats(),
-                  Status(),
-                  Container(
-                    color: Colors.amber,
-                  ),
-                ],
+                children: [Calls(), Chats(), Status(), Calls()],
               ),
-            )
+            ),
           ],
         ),
       ),

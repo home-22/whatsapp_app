@@ -65,7 +65,7 @@ class Chats extends StatelessWidget {
                             color: Colors.amber,
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          child: Text(
+                          child: const Text(
                             '2',
                             style: TextStyle(
                               fontSize: 15,
@@ -73,7 +73,7 @@ class Chats extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ],
