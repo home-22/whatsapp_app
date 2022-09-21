@@ -12,7 +12,9 @@ class Chats extends StatelessWidget {
         children: [
           for (int i = 1; i < 5; i++)
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, 'ChatPage');
+              },
               child: Container(
                 margin: const EdgeInsets.symmetric(vertical: 12),
                 child: Row(
