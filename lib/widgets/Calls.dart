@@ -65,13 +65,14 @@ class Calls extends StatelessWidget {
                       padding: EdgeInsets.all(0),
                       child: Icon(
                         Icons.call_sharp,
-                        color: Colors.green,
+                        color: Colors.red,
                       ),
                     ),
                   ],
                 ),
               ),
             for (int i = 1; i < 5; i++)
+              // 4 do 7
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 12),
                 child: Row(
@@ -122,8 +123,9 @@ class Calls extends StatelessWidget {
                     const Padding(
                       padding: EdgeInsets.all(0),
                       child: Icon(
-                        Icons.call_sharp,
+                        CupertinoIcons.videocam,
                         color: Colors.green,
+                        size: 28,
                       ),
                     ),
                   ],

@@ -32,6 +32,12 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               PopupMenuButton(
+                onSelected: (selected) {
+                  if (selected == 5) {
+                    Navigator.pushNamed(context, 'SettingsPage');
+                  }
+                },
+                elevation: 10,
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 iconSize: 28,
                 itemBuilder: (context) => [

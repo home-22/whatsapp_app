@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_app/pages/Home_Page.dart';
+import 'package:whatsapp_app/pages/Settings_Page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const HomePage(),
+        'SettingsPage': (context) => const SettingsPage(),
       },
     );
   }
