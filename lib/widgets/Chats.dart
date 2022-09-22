@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class Chats extends StatelessWidget {
@@ -10,7 +11,7 @@ class Chats extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       child: Column(
         children: [
-          for (int i = 1; i < 5; i++)
+          for (int i = 1; i < 10; i++)
             InkWell(
               onTap: () {
                 Navigator.pushNamed(context, 'ChatPage');
@@ -19,11 +20,12 @@ class Chats extends StatelessWidget {
                 margin: const EdgeInsets.symmetric(vertical: 12),
                 child: Row(
                   children: [
-                    ClipPath(
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(40),
                       child: Image.asset(
                         'images/user$i.png',
-                        height: 55,
-                        width: 55,
+                        height: 50,
+                        width: 50,
                       ),
                     ),
                     Padding(
@@ -34,13 +36,13 @@ class Chats extends StatelessWidget {
                           Text(
                             'Programer 1',
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.bold),
+                                fontSize: 15, fontWeight: FontWeight.bold),
                           ),
                           SizedBox(height: 8),
                           Text(
                             'Hi Programer, how are you?',
                             style: TextStyle(
-                                fontSize: 15,
+                                fontSize: 13,
                                 color: Colors.grey,
                                 fontWeight: FontWeight.w500),
                           ),
@@ -61,8 +63,8 @@ class Chats extends StatelessWidget {
                         const SizedBox(height: 6),
                         Container(
                           alignment: Alignment.center,
-                          width: 27,
-                          height: 27,
+                          width: 25,
+                          height: 25,
                           decoration: BoxDecoration(
                             color: Colors.amber,
                             borderRadius: BorderRadius.circular(20),

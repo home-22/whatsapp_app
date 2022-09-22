@@ -1,5 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:whatsapp_app/widgets/ChatBottomBar.dart';
+import 'package:whatsapp_app/widgets/ChatSimple.dart';
 
 class ChatPage extends StatelessWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -79,10 +83,55 @@ class ChatPage extends StatelessWidget {
               padding: EdgeInsets.only(top: 10, right: 10),
               child: Icon(
                 Icons.more_vert,
-                size: 35,
+                size: 28,
               ),
             ),
           ],
+        ),
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('images/black.png'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: SingleChildScrollView(
+          child: Padding(
+            padding:
+                const EdgeInsets.only(top: 10, left: 8, right: 8, bottom: 80),
+            child: Column(
+              children: [
+                Container(
+                  width: 300,
+                  margin: const EdgeInsets.only(bottom: 20),
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.amber[100],
+                    borderRadius: BorderRadius.circular(5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        blurRadius: 8,
+                      ),
+                    ],
+                  ),
+                  child: const Text(
+                    'Messages and calls are end-to-end encrypted,No one outside of this chat can read or listen.Tap to learn more',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 15),
+                  ),
+                ),
+                const ChatSimple(),
+                const ChatSimple(),
+                const ChatSimple(),
+                const ChatSimple(),
+                const ChatBottomBar()
+              ],
+            ),
+          ),
         ),
       ),
     );

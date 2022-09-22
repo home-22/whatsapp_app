@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -24,8 +26,8 @@ class SettingsPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(40),
                     child: Image.asset(
                       'images/user.png',
-                      width: 65,
-                      height: 65,
+                      width: 50,
+                      height: 50,
                     ),
                   ),
                   Padding(

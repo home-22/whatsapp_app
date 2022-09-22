@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:whatsapp_app/widgets/Calls.dart';
 import 'package:whatsapp_app/widgets/Chats.dart';
@@ -13,7 +15,7 @@ class HomePage extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(80),
+          preferredSize: const Size.fromHeight(70),
           child: AppBar(
             elevation: 0,
             title: const Padding(
@@ -104,7 +106,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 100,
+                    width: 90,
                     child: Tab(
                       child: Row(
                         children: [
@@ -143,13 +145,23 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-            const Flexible(
+            Flexible(
               flex: 1,
               child: TabBarView(
-                children: [Calls(), Chats(), Status(), Calls()],
+                children: [
+                  Container(color: Colors.black),
+                  const Chats(),
+                  const Status(),
+                  const Calls()
+                ],
               ),
             ),
           ],
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: const Color(0xFF0FCE55),
+          child: const Icon(Icons.message),
         ),
       ),
     );

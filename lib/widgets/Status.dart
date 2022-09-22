@@ -1,6 +1,5 @@
-import 'dart:ui';
+// ignore_for_file: file_names
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Status extends StatelessWidget {
@@ -25,10 +24,10 @@ class Status extends StatelessWidget {
                     ),
                     child: ClipRect(
                       child: Image.asset(
-                        'images/user1.png',
-                        height: 55,
-                        width: 55,
-                      ), //status1
+                        'images/user.png',
+                        height: 50,
+                        width: 50,
+                      ),
                     ),
                   ),
                   Padding(
@@ -55,10 +54,11 @@ class Status extends StatelessWidget {
                     ),
                   ),
                   const Spacer(),
-                  Container(
-                    child: const Icon(
+                  const Padding(
+                    padding: EdgeInsets.all(0),
+                    child: Icon(
                       Icons.more_vert,
-                      color: Colors.amber,
+                      color: Colors.black,
                     ),
                   ),
                 ],
@@ -76,7 +76,7 @@ class Status extends StatelessWidget {
                 ),
               ),
             ),
-            for (int i = 1; i < 3; i++)
+            for (int i = 1; i < 6; i++)
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 12),
                 child: Row(
@@ -91,8 +91,8 @@ class Status extends StatelessWidget {
                         borderRadius: BorderRadius.circular(40),
                         child: Image.asset(
                           'images/user$i.png',
-                          height: 55,
-                          width: 55,
+                          height: 50,
+                          width: 50,
                         ),
                       ),
                     ),
@@ -149,8 +149,8 @@ class Status extends StatelessWidget {
                         borderRadius: BorderRadius.circular(40),
                         child: Image.asset(
                           'images/user$i.png',
-                          height: 55,
-                          width: 55,
+                          height: 50,
+                          width: 50,
                         ),
                       ),
                     ),

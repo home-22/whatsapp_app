@@ -1,7 +1,7 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Calls extends StatelessWidget {
   const Calls({Key? key}) : super(key: key);
@@ -22,8 +22,8 @@ class Calls extends StatelessWidget {
                       borderRadius: BorderRadius.circular(40),
                       child: Image.asset(
                         'images/user$i.png',
-                        height: 60,
-                        width: 60,
+                        height: 55,
+                        width: 55,
                       ),
                     ),
                     Padding(
@@ -71,8 +71,7 @@ class Calls extends StatelessWidget {
                   ],
                 ),
               ),
-            for (int i = 1; i < 5; i++)
-              // 4 do 7
+            for (int i = 5; i < 9; i++)
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 12),
                 child: Row(
@@ -81,8 +80,8 @@ class Calls extends StatelessWidget {
                       borderRadius: BorderRadius.circular(40),
                       child: Image.asset(
                         'images/user$i.png',
-                        height: 60,
-                        width: 60,
+                        height: 55,
+                        width: 55,
                       ),
                     ),
                     Padding(
