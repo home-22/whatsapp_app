@@ -37,8 +37,8 @@ class ChatPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                   child: Image.asset(
                     'images/user.png',
-                    height: 45,
-                    width: 45,
+                    height: 30,
+                    width: 30,
                   ),
                 ),
                 Padding(
@@ -48,7 +48,7 @@ class ChatPage extends StatelessWidget {
                     children: [
                       const Text(
                         'Programer 1',
-                        style: TextStyle(fontSize: 19),
+                        style: TextStyle(fontSize: 17),
                       ),
                       const SizedBox(height: 5),
                       Text(
@@ -69,21 +69,21 @@ class ChatPage extends StatelessWidget {
               padding: EdgeInsets.only(top: 10, right: 25),
               child: Icon(
                 CupertinoIcons.video_camera_solid,
-                size: 35,
+                size: 30,
               ),
             ),
             Padding(
               padding: EdgeInsets.only(top: 10, right: 20),
               child: Icon(
                 Icons.call,
-                size: 25,
+                size: 20,
               ),
             ),
             Padding(
               padding: EdgeInsets.only(top: 10, right: 10),
               child: Icon(
                 Icons.more_vert,
-                size: 28,
+                size: 23,
               ),
             ),
           ],

@@ -1,10 +1,23 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, non_constant_identifier_names, must_be_immutable
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Calls extends StatelessWidget {
-  const Calls({Key? key}) : super(key: key);
+  Calls({Key? key}) : super(key: key);
+
+  List<Text> UserText = [
+    const Text('Stela'),
+    const Text('Petar Mak'),
+    const Text('Robert'),
+    const Text('Andreaa'),
+    const Text('Robertt Olyy'),
+    const Text('Andreassa'),
+    const Text('Paula'),
+    const Text('Ana'),
+    const Text('RRobert'),
+    const Text('Andreaa'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +44,7 @@ class Calls extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'Dear',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+                          Container(child: UserText[i]),
                           const SizedBox(height: 8),
                           Row(
                             children: const [
@@ -89,12 +96,8 @@ class Calls extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'Dear',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
+                          Container(
+                            child: UserText[i],
                           ),
                           const SizedBox(height: 8),
                           Row(

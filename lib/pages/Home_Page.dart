@@ -88,6 +88,8 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
+
+   
         body: Column(
           children: [
             Container(
@@ -97,25 +99,25 @@ class HomePage extends StatelessWidget {
                 indicatorColor: Colors.white,
                 indicatorWeight: 4,
                 labelStyle:
-                    const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                 tabs: [
                   const SizedBox(
-                    width: 25,
+                    width: 20,
                     child: Tab(
                       icon: Icon(Icons.camera_alt),
                     ),
                   ),
                   SizedBox(
-                    width: 90,
+                    width: 75,
                     child: Tab(
                       child: Row(
                         children: [
                           const Text('CHATS'),
-                          const SizedBox(width: 7),
+                          const SizedBox(width: 5),
                           Container(
                             alignment: Alignment.center,
-                            height: 23,
-                            width: 23,
+                            height: 20,
+                            width: 20,
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(10),
@@ -131,13 +133,13 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(
-                    width: 80,
+                    width: 65,
                     child: Tab(
                       child: Text('STATUS'),
                     ),
                   ),
                   const SizedBox(
-                    width: 80,
+                    width: 65,
                     child: Tab(
                       child: Text('CALLS'),
                     ),
@@ -150,9 +152,9 @@ class HomePage extends StatelessWidget {
               child: TabBarView(
                 children: [
                   Container(color: Colors.black),
-                  const Chats(),
-                  const Status(),
-                  const Calls()
+                   Chats(),
+                   Status(),
+                  Calls()
                 ],
               ),
             ),

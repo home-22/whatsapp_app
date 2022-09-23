@@ -1,10 +1,19 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, non_constant_identifier_names, must_be_immutable
 
 import 'package:flutter/material.dart';
 
 class Status extends StatelessWidget {
-  const Status({Key? key}) : super(key: key);
+   Status({Key? key}) : super(key: key);
 
+  List<Text> UserText = [
+    const Text('Stela'),
+    const Text('Petar Mak'),
+    const Text('Robert'),
+    const Text('Andreaa'),
+    const Text('Robertt Olyy'),
+    const Text('Andreassa'),
+   
+  ];
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -100,16 +109,10 @@ class Status extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Alex  Herry',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Text(
+                        children:  [
+                        Container(child: UserText[i],),
+                          const SizedBox(height: 8),
+                          const Text(
                             'Today, 1:40 ',
                             style: TextStyle(
                                 fontSize: 15,
@@ -158,16 +161,10 @@ class Status extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Dear',
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(height: 8),
-                          Text(
+                        children: [
+                          Container(child: UserText[i],),
+                          const SizedBox(height: 8),
+                          const Text(
                             'Today, 1:40 ',
                             style: TextStyle(
                                 fontSize: 15,

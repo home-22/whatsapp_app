@@ -1,9 +1,22 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, must_be_immutable, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 
 class Chats extends StatelessWidget {
-  const Chats({Key? key}) : super(key: key);
+  Chats({Key? key}) : super(key: key);
+
+  List<Text> UserText = [
+    const Text('Stela'),
+    const Text('Petar Mak'),
+    const Text('Robert'),
+    const Text('Andreaa'),
+    const Text('Robertt Olyy'),
+    const Text('Andreassa'),
+    const Text('Paula'),
+    const Text('Ana'),
+    const Text('RRobert'),
+    const Text('Andreaa'),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -32,14 +45,12 @@ class Chats extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 20),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            'Programer 1',
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.bold),
+                        children: [
+                          Container(
+                            child: UserText[i],
                           ),
-                          SizedBox(height: 8),
-                          Text(
+                          const SizedBox(height: 8),
+                          const Text(
                             'Hi Programer, how are you?',
                             style: TextStyle(
                                 fontSize: 13,
